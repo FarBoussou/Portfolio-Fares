@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #eef6ff;
+    color: #333;
+}
+header {
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 5px solid #f39c12;
+}
+header h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+nav ul li a:hover {
+    background-color: #f39c12;
+    color: black;
+}
+#accueil {
+    height: 100vh;
+    background: url('informatique.jpg') center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+#accueil::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#accueil h1,
+#accueil p {
+    position: relative;
+    z-index: 2;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+}
+h2 {
+    font-size: 1.8em;
+    color: #2980b9;
+    text-align: center;
+}
+.grilleimages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.carteimage {
+    background-color: #eef;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.carteimage img {
+    width: 100%;
+    border-radius: 4px;
+}
+.listecompetences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.competence {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button {
+    padding: 10px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+form button:hover {
+    background-color: #1abc9c;
+}
+form input:focus,
+form textarea:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+}
+.menu-competences {
+    position: relative;
+}
+.sous-menu {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border: 1px solid white;
+    z-index: 10;
+}
+.menu-competences:hover .sous-menu {
+    display: block;
+}
+.sous-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+.sous-menu li:hover {
+    background-color: #f39c12;
+}
+.carousel {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+.carousel-container {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+.carteimage {
+    flex: 0 0 100%;
+    position: relative;
+}
+.carteimage img {
+    width: 100%;
+    border-radius: 10px;
+}
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+    .carteimage img {
+    opacity: 0;
+    animation: fade 5s infinite;
+}
+@keyframes fade {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.boutoncv {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: black; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.boutoncv:hover {
+    background-color:grey;
+}
+.contenuapropos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.profil-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+.profil-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+    margin: 20px auto;
+}
